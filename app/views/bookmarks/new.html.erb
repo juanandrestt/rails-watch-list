@@ -1,0 +1,7 @@
+<h1>Ajouter un signet à la liste "<%= @list.name %>"</h1>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie, label: "Choisissez un film" %>
+  <%= f.input :comment, label: "Votre commentaire" %>
+  <%= f.button :submit, "Ajouter ce film à la liste" %>
+<% end %>
+<%= link_to "← Retour à la liste", list_path(@list) %>

@@ -1,0 +1,7 @@
+<%= render @list %>
+<% @list.movies.each do |movie| %>
+  <div class="d-flex">
+    <%= movie.title %>
+    <%= movie.overview %>
+  </div>
+<% end %>
