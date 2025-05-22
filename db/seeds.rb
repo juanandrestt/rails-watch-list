@@ -1,11 +1,13 @@
 require 'json'
 require 'open-uri'
 
-puts "Fetching movies from TMDB..."
-
 url = "https://tmdb.lewagon.com/movie/top_rated"
 movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)["results"]
+
+Bookmark.destroy_all
+List.destroy_all
+Movie.destroy_all
 
 puts "Creating movies..."
 
