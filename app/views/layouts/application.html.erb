@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Movies lists</a>
+      <%= link_to "My lists", lists_path, class: "btn btn-primary" %>
+      <%= link_to "New list", new_list_path, class: "btn btn-primary" %>
+    </nav>
     <%= yield %>
   </body>
 </html>
