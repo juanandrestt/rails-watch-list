@@ -3,7 +3,7 @@
   <% @list.bookmarks.each do |bookmark| %>
     <li>
       <strong><%= bookmark.movie.title %></strong> — <%= bookmark.comment %>
-      <%= link_to "Supprimer", bookmark_path(bookmark), method: :delete, data: { confirm: "Êtes-vous sûr ?" } %>
+      <%= link_to "Supprimer", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" } %>
     </li>
   <% end %>
 </ul>
